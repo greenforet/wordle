@@ -1,34 +1,50 @@
-@font-face{
-    font-family: "Nanum Gothic", sans-serif;
-    src : url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap')
-}
 .header-column{
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    padding: 30px 0 30px 0;
+    justify-content: center;
+    margin-bottom: 10px;
 }
+   
 .header_menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 20px;
     width: 20px;
    
 }
 
-
 .header-title{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
-    font-weight: 10px;
-    padding-left: 30px;
+    
+}
+
+.header-icon1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    margin-left: auto;
+}
+.header-icon2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    margin-left: 10px;
 
 }
 
-.header-icons{
-    width: 20px;
-    height: 20px;
+.header-icon3{
     display: flex;
-    right:0;
-    
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    margin-left: 10px;
 }

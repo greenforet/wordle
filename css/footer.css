@@ -7,7 +7,24 @@ footer{
 }
 
 
-.keyboard-row {
+.keyboard-row1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.keyboard-row2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding-bottom: 10px;
+}
+
+.keyboard-row3{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,12 +32,35 @@ footer{
 }
 
 
+.keyboard-column {
+    color: black;
+    background-color: gainsboro;
+    width: 40px;
+    height: 50px;
+    display: inline-block;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding-left: 25px;
+    padding-top: 25px; 
+  }
 
-.keyboard-column{
+  .keyboard-column_wide{ 
+    color: black;
+    display: inline-block;
+    background-color: gainsboro;
+    width: 100px;
+    height: 70px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .keyboard-column_wide img{
     display: flex;
     justify-content: center;
     align-items: center;
-    border : 3px solid #d3d6da;
-    width: 60px;
-    height: 60px;
-}
+    width: 25px;
+    height: 25px;
+  
+  }
