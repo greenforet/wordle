@@ -42,16 +42,14 @@ footer{
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    padding-left: 25px;
-    padding-top: 25px; 
+
   }
 
   .keyboard-column_wide{ 
     color: black;
     display: inline-block;
     background-color: gainsboro;
-    width: 100px;
-    height: 70px;
+   
     border-radius: 5px;
     cursor: pointer;
   }
