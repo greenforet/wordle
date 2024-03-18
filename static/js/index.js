@@ -1,5 +1,4 @@
 
-
 let attempts = 0;
 let index = 0;
 let timer
@@ -25,10 +24,14 @@ function appStart(){
         attempts += 1;
         index = 0;
     };
-    const handleEnterKey = () => {
+    const handleEnterKey = async() => {
         let 맞은_갯수 = 0;
-        const 응답 = await fetch("/answer");
+        
+        //서버에서 정답을 받아오는 코드
+        const 응답 = await fetch('/answer');
         const 정답 = await 응답.json();
+    
+    
 
         for(let i=0; i<5; i++){
             const block = document.querySelector(
@@ -46,7 +49,7 @@ function appStart(){
             block.style.color = "white";
         }
         if (맞은_갯수 === 5) gameover();
-        nextLine();
+        else nextLine();
     };
     const handleBackspace = () => {
         if (index > 0 ){
@@ -56,7 +59,7 @@ function appStart(){
         preBlock.innerText = "";
         }
         if (index !== 0) index -= 1;
-    }
+    };
     const handleKeydown = (event) => {
         const key = event.key.toUpperCase();
         const keyCode = event.keyCode;
@@ -87,6 +90,7 @@ function appStart(){
         }
 
         timer = setInterval(setTime, 1000);
+        console.log(timer);
     };
 
     startTimer();
@@ -97,21 +101,3 @@ function appStart(){
 
 appStart();
 
-/** 
-const handleClick = (event) => {
-    const clickKey = event.target.getAttribute("data-key");
-    const thisBlock = document.querySelector(
-      `.board-block[data-index='${attempts}${index}']`
-    );
-    if (clickKey === "Backspace") handleBackspace();
-    else if (index === 5) {
-      if (clickKey === "Enter") handleEnterKey();
-      else return;
-    } else if (clickKey !== null && clickKey.length === 1) {
-      thisBlock.innerText = clickKey;
-      index += 1;
-      thisBlock.classList.add("line");
-    }
-    console.log(`${clickKey}`);
-  };
-  **/
